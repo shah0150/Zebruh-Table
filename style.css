@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+table {
+    width: 90%;
+    max-width: 1500px;
+    min-width: 600px;
+    margin: 2em auto;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+th,
+td {
+    border-top: 5px solid hsl(79, 50%, 80%);
+    padding: 2em;
+    text-align: center;
+    position: relative;
+}
+
+tbody tr:nth-child(even) {
+    background: hsla(79, 100%, 50%, 0.5);
+}
+tbody tr:nth-child(odd) {
+    background: hsla(39, 100%, 40%, 0.5);
+}
+th:last-child,
+td:last-child {
+
+}
+
+/*Hover css as taught in class*/
+tbody tr:hover {
+    background: hsla(39, 100%, 80%, 0.5);
+}
+td:hover::before {
+    background: hsla(224, 100%, 80%, 0.9);
+    content: "";
+    height: 100%;
+    left: -5000px;
+    position: absolute;
+    top: 0;
+    width: 10000px;
+    z-index: -1;
+}
+td:hover::after {
+    background-color: #ffff99;
+    content: "";
+    height: 10000px;
+    left: 0;
+    position: absolute;
+    top: -5000px;
+    width: 100%;
+    z-index: -1;
+}
